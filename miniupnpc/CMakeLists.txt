@@ -67,7 +67,6 @@ set (MINIUPNPC_SOURCES
   connecthostport.c
   portlistingparse.c
   receivedata.c
-  listdevices.c
   connecthostport.h
   igd_desc_parse.h
   minisoap.h
