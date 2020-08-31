@@ -79,7 +79,7 @@ ifeq ($(OS),Windows_NT)
 wingenminiupnpcstrings.exe:	wingenminiupnpcstrings.c
 	$(CC) $(CFLAGS) -o $@ $^
 miniupnpcstrings.h: miniupnpcstrings.h.in wingenminiupnpcstrings.exe
-	wingenminiupnpcstrings.exe $< $@
+	./wingenminiupnpcstrings.exe $< $@
 else
 miniupnpcstrings.h:	miniupnpcstrings.h.in VERSION
 	sed 's|OS_STRING ".*"|OS_STRING "Windows/Mingw32"|' $< | \
